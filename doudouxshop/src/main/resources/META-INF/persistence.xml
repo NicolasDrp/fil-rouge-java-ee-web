@@ -7,13 +7,13 @@
 
 	<!-- Define a name used to get an entity manager. Define that you will complete 
 		transactions with the DB -->
-	<persistence-unit name="Doudouxshop"
+	<persistence-unit name="doudouxshop"
 		transaction-type="RESOURCE_LOCAL">
 
 		<!-- Define the class for Hibernate which implements JPA -->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<!-- Define the object that should be persisted in the database -->
-		<class>co.simplon.Doudouxshop.Produit</class>
+		<!-- <class>co.simplon.doudouxshop.Produit</class> -->
 		<properties>
 			<!-- Driver for DB database -->
 			<property name="java.persistence.jdbc.driver"
@@ -29,11 +29,11 @@
 				value="fcbarcelone" />
 
 			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.PostgreSQLDialect" /> <!-- DB Dialect -->
-			<property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+				value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 
-			<property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
-			<property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
 		</properties>
 	</persistence-unit>
 </persistence>

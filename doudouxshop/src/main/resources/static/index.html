@@ -2,9 +2,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Doudouxshop</title>
 </head>
 <body>
 <h1>Test</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>Disponibilité</th>
+  </tr>
+  <tr th:each="product : ${products}">
+    <td th:text="${product.nom}"></td>
+    <td th:text="${product.prix}"></td>
+    <td th:text="${product.quantite}"></td>
+  </tr>
+</table>
+
+
+
 </body>
 </html>
